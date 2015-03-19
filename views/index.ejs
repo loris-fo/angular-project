@@ -21,14 +21,16 @@
         <button class="btn" ng-click="doClear()">Clear</button>
       </center>
       </form>
+
       <ul class="list-group" ng-repeat="user in searchResult.items">
         <li>
           <img ng-src="{{user.avatar_url}}" height="100" width="100">
           <br>
           <a ng-href="{{user.html_url}}">{{user.login}}</a>
-<!--           <p>{{user.login}} is a good developer:</p>{{username.hireable}}
- -->          Repos: {{username.public_repos}}
-          Followers: {{username.followers}}
+          Repos: <a ng-href="{{repoResult.repos_url}}">{{repoResult.public_repos}}</a>
+          Followers: <a ng-href="{{repoResult.following_url}}">{{repoResult.followers}}</a>
+          <br>
+          is {{user.login}} a good developer: {{repoResult.hireable}}
         </li>
         <li>
           </li>
