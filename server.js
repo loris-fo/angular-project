@@ -10,6 +10,9 @@ app.get('/', function(request, response) {
   response.render('index')
 });
 
+// app.get('/hello', function(request, response) {
+//   response.send('<h1>Welcome to GithubSearch</h1>')
+// });
 
 server.listen(port, function() {
   console.log("Server listenning on port " + port);
